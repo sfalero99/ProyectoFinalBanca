@@ -27,6 +27,22 @@ public class Gestor{
         this.apellidos = apellidos;
     }
 
+    public void CrearPerfil(){
+    
+    }
+    
+    public void CrearCuenta(){
+    
+    }
+    
+    public void CrearTarjeta(){
+    
+    }
+    
+    public void ModificarPerfil(){
+    
+    }
+    
     public String getLogin() {
         return login;
     }

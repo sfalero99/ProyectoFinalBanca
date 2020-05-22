@@ -6,7 +6,6 @@
 package proyectofinalbanca;
 
 import java.util.ArrayList;
-
 /**
  *
  * @author Sergio
@@ -34,6 +33,14 @@ public class Cliente{
         this.edad = edad;
     }
 
+    public void Ingresar(){
+    
+    }
+    
+    public void Retirar(){
+    
+    }     
+    
     public String getLogin() {
         return login;
     }

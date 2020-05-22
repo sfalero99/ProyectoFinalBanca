@@ -6,7 +6,6 @@
 package proyectofinalbanca;
 
 import java.util.ArrayList;
-
 /**
  *
  * @author Sergio
@@ -17,7 +16,8 @@ public class Tarjeta {
     double limite_pagoOnline;
     ArrayList movimiento[];
 
-    public Tarjeta(double limite_retirada, double limite_pagoOnline) {
+    public Tarjeta(int numero, double limite_retirada, double limite_pagoOnline) {
+        this.num_tarjeta=numero;
         this.limite_retirada = limite_retirada;
         this.limite_pagoOnline = limite_pagoOnline;
     }
@@ -45,7 +45,10 @@ public class Tarjeta {
     public void setLimite_pagoOnline(double limite_pagoOnline) {
         this.limite_pagoOnline = limite_pagoOnline;
     }
-    
-    
+
+    @Override
+    public String toString() {
+        return "Tarjeta{" + "num_tarjeta=" + num_tarjeta + ", limite_retirada=" + limite_retirada + ", limite_pagoOnline=" + limite_pagoOnline + ", movimiento=" + movimiento + '}';
+    }   
     
 }

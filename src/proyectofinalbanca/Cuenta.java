@@ -33,7 +33,12 @@ public class Cuenta {
         this.limite = limite;
         this.fecha_apertura = LocalDate.now();
     }
-
+    
+    public boolean comprobarSaldo(){
+        
+        return true;
+    }
+    
     public int getNum_cuenta() {
         return num_cuenta;
     }
@@ -72,6 +77,11 @@ public class Cuenta {
 
     public void setSaldo_medio(double saldo_medio) {
         this.saldo_medio = saldo_medio;
+    }
+
+    @Override
+    public String toString() {
+        return "Cuenta{" + "num_cuenta=" + num_cuenta + ", saldo=" + saldo + ", limite=" + limite + ", fecha_apertura=" + fecha_apertura + ", saldo_medio=" + saldo_medio + '}';
     }
  
     
