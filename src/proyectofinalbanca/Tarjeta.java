@@ -12,6 +12,7 @@ import java.util.ArrayList;
  * @author Sergio
  */
 public class Tarjeta {
+    int num_tarjeta;
     double limite_retirada;
     double limite_pagoOnline;
     ArrayList movimiento[];
@@ -20,6 +21,31 @@ public class Tarjeta {
         this.limite_retirada = limite_retirada;
         this.limite_pagoOnline = limite_pagoOnline;
     }
+
+    public int getNum_tarjeta() {
+        return num_tarjeta;
+    }
+
+    public void setNum_tarjeta(int num_tarjeta) {
+        this.num_tarjeta = num_tarjeta;
+    }
+
+    public double getLimite_retirada() {
+        return limite_retirada;
+    }
+
+    public void setLimite_retirada(double limite_retirada) {
+        this.limite_retirada = limite_retirada;
+    }
+
+    public double getLimite_pagoOnline() {
+        return limite_pagoOnline;
+    }
+
+    public void setLimite_pagoOnline(double limite_pagoOnline) {
+        this.limite_pagoOnline = limite_pagoOnline;
+    }
+    
     
     
 }

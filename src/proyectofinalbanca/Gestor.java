@@ -13,7 +13,6 @@ import java.util.Scanner;
  * @author Sergio
  */
 public class Gestor{
-    static Scanner sc = new Scanner (System.in);
     
     String login;
     String password;
@@ -28,6 +27,39 @@ public class Gestor{
         this.apellidos = apellidos;
     }
 
+    public String getLogin() {
+        return login;
+    }
+
+    public void setLogin(String login) {
+        this.login = login;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getApellidos() {
+        return apellidos;
+    }
+
+    public void setApellidos(String apellidos) {
+        this.apellidos = apellidos;
+    }
+
+    
     @Override
     public String toString() {
         return "login=" + login + ", nombre=" + nombre + ", apellidos=" + apellidos + " | Gestor";
