@@ -42,8 +42,14 @@ public class Cliente{
     }
     
     public void Retirar(double dinero, int cuenta){
-        if(Cuenta.comprobarSaldo(dinero, cuenta)){
-            Cuenta.cuentas.get(cuenta).setSaldo(Cuenta.cuentas.get(cuenta).getSaldo() - dinero);
+        if(Cuenta.cuentas.size()<= cuenta){    
+            if(Cuenta.comprobarSaldo(dinero, cuenta)){
+                Cuenta.cuentas.get(cuenta).setSaldo(Cuenta.cuentas.get(cuenta).getSaldo() - dinero);
+            }else{
+                System.out.println("Saldo insuficiente");
+            }
+        }else{
+            System.out.println("Cuenta inexistente");
         }
     }     
     
