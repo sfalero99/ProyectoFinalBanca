@@ -5,24 +5,44 @@
  */
 package proyectofinalbanca;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author Sergio
  */
-public class Cliente extends Usuario{
-    
+public class Cliente{
+    String login;
+    String password;
+    String nombre;
+    String apellidos;
     String direccion;
     String DNI;
     String telefono;
     int edad;
+    ArrayList<Cliente> clientes = new ArrayList<> ();
+    ArrayList<Cuenta> cuentas = new ArrayList<> ();
     
     public Cliente(String login, String password, String nombre, String apellidos, String direccion, String DNI, String telefono, int edad) {
-        super(login, password, nombre, apellidos);
+        this.login = login;
+        this.password = password;
+        this.nombre = nombre;
+        this.apellidos = apellidos;
         this.direccion = direccion;
         this.DNI = DNI;
         this.telefono = telefono;
         this.edad = edad;
     }
+
+    
+    
+    @Override
+    public String toString() {
+        return "login=" + login + ", nombre=" + nombre + ", apellidos=" + apellidos + ", direccion=" + direccion + ", DNI=" + DNI + ", telefono=" + telefono + ", edad=" + edad + '}';
+    }
+
+       
+    
     
     
 }

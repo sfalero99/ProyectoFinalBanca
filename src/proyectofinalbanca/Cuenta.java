@@ -6,6 +6,7 @@
 package proyectofinalbanca;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
 
 /**
  *
@@ -17,6 +18,7 @@ public class Cuenta {
     double limite;
     LocalDate fecha_apertura;
     double saldo_medio;
+    static ArrayList<Tarjeta> tarjetas= new ArrayList <>();
 
     public Cuenta(int numero, double saldo, double limite) {
         this.num_cuenta=numero;
