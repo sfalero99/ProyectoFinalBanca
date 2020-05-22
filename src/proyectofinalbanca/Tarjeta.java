@@ -5,10 +5,21 @@
  */
 package proyectofinalbanca;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author Sergio
  */
 public class Tarjeta {
+    double limite_retirada;
+    double limite_pagoOnline;
+    ArrayList movimiento[];
+
+    public Tarjeta(double limite_retirada, double limite_pagoOnline) {
+        this.limite_retirada = limite_retirada;
+        this.limite_pagoOnline = limite_pagoOnline;
+    }
+    
     
 }

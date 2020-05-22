@@ -9,6 +9,17 @@ package proyectofinalbanca;
  *
  * @author Sergio
  */
-public class Usuario {
+public abstract class Usuario {
+    String login;
+    String password;
+    String nombre;
+    String apellidos;
+
+    public Usuario(String login, String password, String nombre, String apellidos) {
+        this.login = login;
+        this.password = password;
+        this.nombre = nombre;
+        this.apellidos = apellidos;
+    }   
     
 }

@@ -9,6 +9,10 @@ package proyectofinalbanca;
  *
  * @author Sergio
  */
-public class Gestor {
-    
+public class Gestor extends Usuario{
+
+    public Gestor(String login, String password, String nombre, String apellidos) {
+        super(login, password, nombre, apellidos);
+    }
+       
 }
