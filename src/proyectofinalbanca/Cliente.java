@@ -45,6 +45,7 @@ public class Cliente{
         if(Cuenta.cuentas.size()<= cuenta){    
             if(Cuenta.comprobarSaldo(dinero, cuenta)){
                 Cuenta.cuentas.get(cuenta).setSaldo(Cuenta.cuentas.get(cuenta).getSaldo() - dinero);
+                System.out.println("Retirada de dinero completada con exito");
             }else{
                 System.out.println("Saldo insuficiente");
             }

@@ -27,20 +27,75 @@ public class Gestor{
         this.apellidos = apellidos;
     }
 
-    public void CrearPerfil(){
-    
+    public void CrearPerfil(String login, String password, String nombre, String apellidos, String direccion, String DNI, String telefono, int edad){
+        boolean existe=false;
+        for (int i = 0; i < Cliente.clientes.size(); i++) {
+            if (Cliente.clientes.get(i).getLogin().equals(login)) existe = true;
+        }
+        if (!existe){
+            Cliente newClient = new Cliente (login, password, nombre, apellidos, direccion, DNI, telefono, edad);
+            Cliente.clientes.add(newClient);
+        }else{
+            System.out.println("Usuario ya existente");
+        }
+        
     }
     
-    public void CrearCuenta(){
-    
+    public void CrearCuenta(int numero, double saldo, double limite){
+        boolean existe=false;
+        for (int i = 0; i < Cuenta.cuentas.size(); i++) {
+            if (Cuenta.cuentas.get(i).getNum_cuenta() == numero) existe = true;
+        }
+        if (!existe){
+            Cuenta newCuenta = new Cuenta (numero, saldo, limite);
+            Cuenta.cuentas.add(newCuenta);
+        }else{
+            System.out.println("Cuenta ya existente");
+        }
     }
     
-    public void CrearTarjeta(){
-    
+    public void CrearCuenta_v2(int numero, double limite){
+        boolean existe=false;
+        for (int i = 0; i < Cuenta.cuentas.size(); i++) {
+            if (Cuenta.cuentas.get(i).getNum_cuenta() == numero) existe = true;
+        }
+        if (!existe){
+            Cuenta newCuenta = new Cuenta (numero, limite);
+            Cuenta.cuentas.add(newCuenta);
+        }else{
+            System.out.println("Cuenta ya existente");
+        }
     }
     
-    public void ModificarPerfil(){
+    public void CrearTarjeta(int numero, double limite_retirada, double limite_pagoOnline){
+        boolean existe=false;
+        for (int i = 0; i < Tarjeta.tarjetas.size(); i++) {
+            if (Tarjeta.tarjetas.get(i).getNum_tarjeta() == numero) existe = true;
+        }
+        if (!existe){
+            Tarjeta newTarjeta = new Tarjeta (numero, limite_retirada, limite_pagoOnline);
+            Tarjeta.tarjetas.add(newTarjeta);
+        }else{
+            System.out.println("Cuenta ya existente");
+        }
+    }
     
+    public void ModificarPerfil(int numero, String login, String password, String nombre, String apellidos, String direccion, String DNI, String telefono, int edad){
+        if(Cliente.clientes.size()<=numero){
+            if(Cliente.clientes.get(numero).getLogin().equals(login)){
+                Cliente.clientes.get(numero).setPassword(password);
+                Cliente.clientes.get(numero).setNombre(nombre);
+                Cliente.clientes.get(numero).setApellidos(apellidos);
+                Cliente.clientes.get(numero).setDireccion(direccion);
+                Cliente.clientes.get(numero).setDNI(DNI);
+                Cliente.clientes.get(numero).setTelefono(telefono);
+                Cliente.clientes.get(numero).setEdad(edad);  
+            }else{
+                System.out.println("Login incorrecto");
+            }            
+        }else{
+            System.out.println("Cliente inexistente");
+        }
     }
     
     public String getLogin() {
