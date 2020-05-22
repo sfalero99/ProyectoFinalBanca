@@ -15,6 +15,7 @@ public class Tarjeta {
     double limite_retirada;
     double limite_pagoOnline;
     ArrayList movimiento[];
+    static ArrayList<Tarjeta> tarjetas= new ArrayList <>();
 
     public Tarjeta(int numero, double limite_retirada, double limite_pagoOnline) {
         this.num_tarjeta=numero;

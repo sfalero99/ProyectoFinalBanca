@@ -17,8 +17,9 @@ public class Cuenta {
     double saldo;
     double limite;
     LocalDate fecha_apertura;
-    double saldo_medio;
-    static ArrayList<Tarjeta> tarjetas= new ArrayList <>();
+    double saldo_medio;    
+    static ArrayList<Cuenta> cuentas = new ArrayList<> ();
+    
 
     public Cuenta(int numero, double saldo, double limite) {
         this.num_cuenta=numero;
@@ -34,9 +35,11 @@ public class Cuenta {
         this.fecha_apertura = LocalDate.now();
     }
     
-    public boolean comprobarSaldo(){
-        
-        return true;
+    public static boolean comprobarSaldo(double dinero, int cuenta){
+        if((cuentas.get(cuenta).saldo-dinero) >= 0){
+            return true;
+        }
+        else return false;
     }
     
     public int getNum_cuenta() {

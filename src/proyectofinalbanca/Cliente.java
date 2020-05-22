@@ -19,8 +19,7 @@ public class Cliente{
     String DNI;
     String telefono;
     int edad;
-    ArrayList<Cliente> clientes = new ArrayList<> ();
-    ArrayList<Cuenta> cuentas = new ArrayList<> ();
+    static ArrayList<Cliente> clientes = new ArrayList<> ();
     
     public Cliente(String login, String password, String nombre, String apellidos, String direccion, String DNI, String telefono, int edad) {
         this.login = login;
@@ -33,12 +32,19 @@ public class Cliente{
         this.edad = edad;
     }
 
-    public void Ingresar(){
-    
+    public void Ingresar(double dinero, int cuenta){
+        if (Cuenta.cuentas.size()<= cuenta){
+            Cuenta.cuentas.get(cuenta).setSaldo(Cuenta.cuentas.get(cuenta).getSaldo()+dinero);
+            System.out.println("Ingreso realizado");
+        }else{
+            System.out.println("Cuenta inexistente");
+        }         
     }
     
-    public void Retirar(){
-    
+    public void Retirar(double dinero, int cuenta){
+        if(Cuenta.comprobarSaldo(dinero, cuenta)){
+            Cuenta.cuentas.get(cuenta).setSaldo(Cuenta.cuentas.get(cuenta).getSaldo() - dinero);
+        }
     }     
     
     public String getLogin() {
@@ -109,10 +115,5 @@ public class Cliente{
     @Override
     public String toString() {
         return "login=" + login + ", nombre=" + nombre + ", apellidos=" + apellidos + ", direccion=" + direccion + ", DNI=" + DNI + ", telefono=" + telefono + ", edad=" + edad + '}';
-    }
-
-       
-    
-    
-    
+    }  
 }
