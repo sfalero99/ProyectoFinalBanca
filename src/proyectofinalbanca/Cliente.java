@@ -7,8 +7,10 @@ package proyectofinalbanca;
 
 import java.util.ArrayList;
 /**
- *
+ * Clase con todos los datos del cliente y las operaciones que puede realizar.
+ * 
  * @author Sergio
+ * @version 1.0
  */
 public class Cliente{
     String login;
@@ -79,136 +81,153 @@ public class Cliente{
     }    
     
     /**
+     * Devuelve el login del usuario.
      * 
-     * @return Devuelve el login del usuario.
+     * @return Login user
      */
     public String getLogin() {
         return login;
     }
 
     /**
+     * Establece el login del usuario
      * 
-     * @param login Establece el login del usuario
+     * @param login Login user
      */
     public void setLogin(String login) {
         this.login = login;
     }
     
     /**
+     * Devuelve la password del usuario.
      * 
-     * @return Devuelve la password del usuario.
+     * @return password
      */
     public String getPassword() {
         return password;
     }
 
     /**
+     * Establece la password del usuario.
      * 
-     * @param password Establece la password del usuario.
+     * @param password password
      */
     public void setPassword(String password) {
         this.password = password;
     }
 
     /**
+     * Devuelve el nombre del usuario.
      * 
-     * @return Devuelve el nombre del usuario.
+     * @return nombre
      */
     public String getNombre() {
         return nombre;
     }
 
     /**
+     * Establece el nombre del usuario.
      * 
-     * @param nombre Establece el nombre del usuario.
+     * @param nombre nombre
      */
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
 
     /**
+     * Devuelve los apellidos del usuario.
      * 
-     * @return Devuelve los apellidos del usuario.
+     * @return apellidos
      */
     public String getApellidos() {
         return apellidos;
     }
 
     /**
+     * Establece los apellidos del usuario.
      * 
-     * @param apellidos Establece los apellidos del usuario.
+     * @param apellidos apellidos
      */
     public void setApellidos(String apellidos) {
         this.apellidos = apellidos;
     }
 
     /**
+     * Devuelve la direccion fiscal del usuario.
      * 
-     * @return Devuelve la direccion fiscal del usuario.
+     * @return direccion
      */
     public String getDireccion() {
         return direccion;
     }
 
     /**
+     * Establece la direccion fiscal del usuario.
      * 
-     * @param direccion Establece la direccion fiscal del usuario.
+     * @param direccion direccion
      */
     public void setDireccion(String direccion) {
         this.direccion = direccion;
     }
 
     /**
+     * Devuelve el DNI del usuario.
      * 
-     * @return Devuelve el DNI del usuario.
+     * @return DNI
      */
     public String getDNI() {
         return DNI;
     }
 
     /**
+     * Establece el DNI del usuario.
      * 
-     * @param DNI Establece el DNI del usuario.
+     * @param DNI DNI
      */
     public void setDNI(String DNI) {
         this.DNI = DNI;
     }
 
     /**
+     * Devuelve el Telefono del usuario.
      * 
-     * @return Devuelve el Telefono del usuario.
+     * @return Telefono
      */
     public String getTelefono() {
         return telefono;
     }
 
     /**
+     * Establece el Telefono del usuario.
      * 
-     * @param telefono Establece el Telefono del usuario.
+     * @param telefono Telefono
      */
     public void setTelefono(String telefono) {
         this.telefono = telefono;
     }
 
     /**
+     * Devuelve la edad del usuario.
      * 
-     * @return Devuelve la edad del usuario.
+     * @return edad
      */
     public int getEdad() {
         return edad;
     }
 
     /**
+     * Establece la edad del usuario.
      * 
-     * @param edad Establece la edad del usuario.
+     * @param edad edad
      */
     public void setEdad(int edad) {
         this.edad = edad;
     }
 
     /**
+     * Devuelve el toString de la clase Cliente sin mostrar la contraseña.
      * 
-     * @return Devuelve el toString de la clase Cliente sin mostrar la contraseña.
+     * @return toString clase Cliente
      */    
     @Override
     public String toString() {

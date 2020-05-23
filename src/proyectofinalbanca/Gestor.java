@@ -7,8 +7,10 @@ package proyectofinalbanca;
 
 import java.util.ArrayList;
 /**
- *
+ * Clase con los datos del gestor y todas las operaciones que puede realizar
+ * 
  * @author Sergio
+ * @version 1.0
  */
 public class Gestor{
     String login;
@@ -149,72 +151,81 @@ public class Gestor{
     }
     
     /**
+     * Devuelve el login del usuario.
      * 
-     * @return Devuelve el login del usuario.
+     * @return login
      */
     public String getLogin() {
         return login;
     }
 
     /**
+     * Establece el login del usuario.
      * 
-     * @param login Establece el login del usuario.
+     * @param login login
      */
     public void setLogin(String login) {
         this.login = login;
     }
 
     /**
+     * Devuelve la password del usuario.
      * 
-     * @return Devuelve la password del usuario.
+     * @return password
      */
     public String getPassword() {
         return password;
     }
 
     /**
+     * Establece la password del usuario.
      * 
-     * @param password Establece la password del usuario.
+     * @param password password
      */
     public void setPassword(String password) {
         this.password = password;
     }
 
     /**
+     * Devuelve el nombre del usuario.
      * 
-     * @return Devuelve el nombre del usuario.
+     * @return nombre
      */
     public String getNombre() {
         return nombre;
     }
 
     /**
+     * Establece el nombre del usuario.
      * 
-     * @param nombre Establece el nombre del usuario.
+     * @param nombre nombre
      */
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
 
     /**
+     * Devuelve los apellidos del usuario.
      * 
-     * @return Devuelve los apellidos del usuario.
+     * @return apellidos
      */
     public String getApellidos() {
         return apellidos;
     }
 
     /**
+     * Establece los apellidos del usuario.
      * 
-     * @param apellidos Establece los apellidos del usuario.
+     * @param apellidos apellidos
      */
     public void setApellidos(String apellidos) {
         this.apellidos = apellidos;
     }
 
     /**
+     * Devuelve el toString de la clase Gestor
      * 
-     * @return Devuelve el toString de la clase Gestor
+     * @return toString clase gestor
      */
     @Override
     public String toString() {

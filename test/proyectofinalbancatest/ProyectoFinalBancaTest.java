@@ -14,8 +14,10 @@ import static org.junit.Assert.*;
 import proyectofinalbanca.*;
 
 /**
- *
+ * Clase para realizar todos los tests y comprobar que todo esta correcto.
+ * 
  * @author Sergio
+ * @version 1.0
  */
 public class ProyectoFinalBancaTest {
     
@@ -38,8 +40,16 @@ public class ProyectoFinalBancaTest {
     public void tearDown() {
     }
     
+    
     /**
      * PRUEBAS CLASE CLIENTE
+     */
+    /**
+     * Se ingresa dinero en cada una de las cuentas, para la cuenta 1 se ingresa 
+     * un valor y para la segunda se hace el ingreso dos veces para comprobar que 
+     * no se queda bloqueado de alguna forma y simplemente suma los dos valores. 
+     * Se comprueba si el valor final es el que tiene que ser y también se comprueba 
+     * si es falso que el saldo sea 0 o sea uno de los ingresos parciales.
      */
     @Test
     public void clienteIngresar() {
@@ -62,7 +72,15 @@ public class ProyectoFinalBancaTest {
         assertFalse(Cuenta.cuentas.get(1).getSaldo() == 0); 
         Cuenta.cuentas.clear();
     }
-   
+    
+   /**
+    * Se retira dinero una sola vez de una cuenta y de la otra se encadenan dos 
+    * retiradas. En el primer caso se retira mas de lo que hay en la cuenta para 
+    * provocar el error Saldo insuficiente al comprobar el saldo, por lo tanto, 
+    * el estado de esa cuenta debería ser el inicial, sin modificar nada, y de 
+    * la otra se comprueba si es lo que tiene que ser, es alguno de los parciales 
+    * o no se ha modificado.
+    */
     @Test
     public void clienteRetirar() {   
         Cuenta cuenta1 = new Cuenta (1234,525, 500);
@@ -86,8 +104,15 @@ public class ProyectoFinalBancaTest {
         Cuenta.cuentas.clear();
     }     
         
+    
+    
     /**
      * PRUEBAS CLASE GESTOR
+     */
+    /**
+     * Se genera dos clientes nuevos con todos sus datos y luego se compara si 
+     * cada uno tiene el login tiene que tener y después se comprueba que algunos 
+     * de los valores del primer cliente sean correctos.
      */
     @Test
     public void gestorCrearPerfil(){
@@ -105,6 +130,13 @@ public class ProyectoFinalBancaTest {
         
     }
     
+    /**
+     * Se crean dos nuevas cuentas, una con cada uno de las dos formas posibles, 
+     * con saldo y sin saldo, luego se comprueba que los números de cuenta de cada 
+     * uno de ellas esta correcto y se comprueba que el saldo se ha añadido 
+     * correctamente recordando que el saldo de la forma sin saldo es igual a 0. 
+     * Se comprueba también que el limite de las dos cuentas está correcto. 
+     */
     @Test
     public void gestorCrearCuenta(){
         Gestor.CrearCuenta(1235, 500, 500);
@@ -120,6 +152,10 @@ public class ProyectoFinalBancaTest {
         Cuenta.cuentas.clear();
     }
 
+    /**
+     * Crea dos tarjetas con distintos datos y luego los compara uno a uno para 
+     * cada tarjeta.
+     */
     @Test
     public void gestorCrearTarjeta(){
         Gestor.CrearTarjeta(987465, 500, 250);
@@ -133,6 +169,15 @@ public class ProyectoFinalBancaTest {
         assertTrue(Tarjeta.tarjetas.get(1).getLimite_pagoOnline() == 500);        
     }
     
+    /**
+     * Se insertan todos los datos del cliente modificando algunos datos los cuales 
+     * luego son comparados para confirmar el cambio correctamente. Después se 
+     * vuelve a modificar el mismo usuario, pero esta vez indicando mal la posición 
+     * del array, en este caso al comprobar que el login no coincide, no debería 
+     * cambiar ningún dato y mostrar el mensaje de login incorrecto. Se realiza la 
+     * prueba para confirmar que la contraseña no ha cambiado, pero también se revisa 
+     * que no haya cambiado por error la contraseña del otro usuario. 
+     */
     @Test
     public void gestorModificarPerfil(){
         Gestor.ModificarPerfil(0, "sfalero99", "987465", "Sergio", "Falero Montero", "Calle del Sol, 12", "12345678B", "601545365", 22);
@@ -151,10 +196,14 @@ public class ProyectoFinalBancaTest {
         assertTrue(Cliente.clientes.get(1).getPassword().equals("54321"));
     }
     
+    
     /**
      * PRUEBAS CLASE CUENTA
      */
-    
+    /**
+     * Se le añade una cuenta y se realizan pruebas para comprobar si devuelve 
+     * true o false según le pidamos dinero
+     */
     @Test
     public void cuentaComprobarSaldo(){
         Cuenta cuenta0 = new Cuenta (1234, 1000, 500);          

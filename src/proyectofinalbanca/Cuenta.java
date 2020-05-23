@@ -8,8 +8,11 @@ package proyectofinalbanca;
 import java.time.LocalDate;
 import java.util.ArrayList;
 /**
- *
+ * Clase para almacenar todos los datos acerca de la cuenta del cliente con su
+ * metodo para comprobar el saldo.
+ * 
  * @author Sergio
+ * @version 1.0
  */
 public class Cuenta {
     int num_cuenta;
@@ -61,88 +64,99 @@ public class Cuenta {
     }
     
     /**
+     * Devuelve el numero de cuenta
      * 
-     * @return Devuelve el numero de cuenta
+     * @return Num_cuenta
      */
     public int getNum_cuenta() {
         return num_cuenta;
     }
 
     /**
+     * Establece el numero de cuenta
      * 
-     * @param num_cuenta Establece el numero de cuenta
+     * @param num_cuenta Num_cuenta
      */
     public void setNum_cuenta(int num_cuenta) {
         this.num_cuenta = num_cuenta;
     }
 
     /**
+     * Devuelve el saldo de la cuenta
      * 
-     * @return Devuelve el saldo de la cuenta
+     * @return saldo
      */
     public double getSaldo() {
         return saldo;
     }
 
     /**
+     * Establece el saldo de la cuenta
      * 
-     * @param saldo Establece el saldo de la cuenta
+     * @param saldo saldo
      */
     public void setSaldo(double saldo) {
         this.saldo = saldo;
     }
 
     /**
+     * Devuelve el limite de la cuenta
      * 
-     * @return Devuelve el limite de la cuenta
+     * @return limite
      */
     public double getLimite() {
         return limite;
     }
 
     /**
+     * Establece el limite de la cuenta
      * 
-     * @param limite Establece el limite de la cuenta
+     * @param limite limite
      */
     public void setLimite(double limite) {
         this.limite = limite;
     }
 
     /**
+     * Devuelve la fecha de apertura de la cuenta
      * 
-     * @return Devuelve la fecha de apertura de la cuenta
+     * @return Fecha_apertura
      */
     public LocalDate getFecha_apertura() {
         return fecha_apertura;
     }
 
     /**
+     * Establece la fecha de apertura de la cuenta
      * 
-     * @param fecha_apertura Establece la fecha de apertura de la cuenta
+     * @param fecha_apertura Fecha_apertura
      */
     public void setFecha_apertura(LocalDate fecha_apertura) {
         this.fecha_apertura = fecha_apertura;
     }
 
     /**
+     * Devuelve el saldo medio de la cuenta a lo largo de 12 meses
      * 
-     * @return Devuelve el saldo medio de la cuenta a lo largo de 12 meses
+     * @return saldo_medio
      */
     public double getSaldo_medio() {
         return saldo_medio;
     }
 
     /**
+     * Establece el saldo medio de la cuenta
      * 
-     * @param saldo_medio Establece el saldo medio de la cuenta
+     * @param saldo_medio saldo_medio
      */
     public void setSaldo_medio(double saldo_medio) {
         this.saldo_medio = saldo_medio;
     }
 
     /**
+     * Devuelve el toString de la clase Cuenta
      * 
-     * @return Devuelve el toString de la clase Cuenta
+     * @return toString clase Cuenta
      */
     @Override
     public String toString() {
