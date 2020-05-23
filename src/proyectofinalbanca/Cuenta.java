@@ -17,7 +17,7 @@ public class Cuenta {
     double limite;
     LocalDate fecha_apertura;
     double saldo_medio;    
-    static ArrayList<Cuenta> cuentas = new ArrayList<> ();
+    public static ArrayList<Cuenta> cuentas = new ArrayList<> ();
     
     /**
      * Constructor 1 de la clase Cuenta para establecer el saldo inicial

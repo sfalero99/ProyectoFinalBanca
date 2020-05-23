@@ -19,7 +19,7 @@ public class Cliente{
     String DNI;
     String telefono;
     int edad;
-    static ArrayList<Cliente> clientes = new ArrayList<> ();
+    public static ArrayList<Cliente> clientes = new ArrayList<> ();
     
     /**
      * Constructor de la clase Cliente
@@ -50,8 +50,8 @@ public class Cliente{
      * @param dinero Importe que el usuario quiere ingresar
      * @param cuenta La posicion de la cuenta en el array de cuentas
      */
-    public void Ingresar(double dinero, int cuenta){
-        if (Cuenta.cuentas.size()<= cuenta){
+    public static void Ingresar(double dinero, int cuenta){
+        if (Cuenta.cuentas.size()>= cuenta){
             Cuenta.cuentas.get(cuenta).setSaldo(Cuenta.cuentas.get(cuenta).getSaldo()+dinero);
             System.out.println("Ingreso realizado");
         }else{
@@ -65,8 +65,8 @@ public class Cliente{
      * @param dinero Importe que el usuario quiere retirar
      * @param cuenta La posicion de la cuenta en el array de cuentas
      */
-    public void Retirar(double dinero, int cuenta){
-        if(Cuenta.cuentas.size()<= cuenta){    
+    public static void Retirar(double dinero, int cuenta){
+        if(Cuenta.cuentas.size()>= cuenta){    
             if(Cuenta.comprobarSaldo(dinero, cuenta)){
                 Cuenta.cuentas.get(cuenta).setSaldo(Cuenta.cuentas.get(cuenta).getSaldo() - dinero);
                 System.out.println("Retirada de dinero completada con exito");

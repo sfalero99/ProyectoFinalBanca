@@ -15,7 +15,7 @@ public class Tarjeta {
     double limite_retirada;
     double limite_pagoOnline;
     ArrayList movimiento[];
-    static ArrayList<Tarjeta> tarjetas= new ArrayList <>();
+    public static ArrayList<Tarjeta> tarjetas= new ArrayList <>();
 
     /**
      * Constructor de la clase Tarjeta

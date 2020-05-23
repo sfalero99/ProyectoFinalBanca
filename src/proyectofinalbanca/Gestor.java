@@ -15,7 +15,7 @@ public class Gestor{
     String password;
     String nombre;
     String apellidos;    
-    ArrayList<Gestor> gestores = new ArrayList<> ();
+    public static ArrayList<Gestor> gestores = new ArrayList<> ();
     
     /**
      * Constructor de la clase Gestor
@@ -44,7 +44,7 @@ public class Gestor{
      * @param telefono Telefono personal del usuario
      * @param edad Edad del usuario
      */
-    public void CrearPerfil(String login, String password, String nombre, String apellidos, String direccion, String DNI, String telefono, int edad){
+    public static void CrearPerfil(String login, String password, String nombre, String apellidos, String direccion, String DNI, String telefono, int edad){
         boolean existe=false;
         for (int i = 0; i < Cliente.clientes.size(); i++) {
             if (Cliente.clientes.get(i).getLogin().equals(login)) existe = true;
@@ -65,7 +65,7 @@ public class Gestor{
      * @param saldo Saldo inicial de la cuenta
      * @param limite Limite para las operaciones de la cuenta
      */
-    public void CrearCuenta(int numero, double saldo, double limite){
+    public static void CrearCuenta(int numero, double saldo, double limite){
         boolean existe=false;
         for (int i = 0; i < Cuenta.cuentas.size(); i++) {
             if (Cuenta.cuentas.get(i).getNum_cuenta() == numero) existe = true;
@@ -84,7 +84,7 @@ public class Gestor{
      * @param numero Numero de cuenta
      * @param limite Limite para las operaciones de la cuenta
      */
-    public void CrearCuenta_v2(int numero, double limite){
+    public static void CrearCuenta_v2(int numero, double limite){
         boolean existe=false;
         for (int i = 0; i < Cuenta.cuentas.size(); i++) {
             if (Cuenta.cuentas.get(i).getNum_cuenta() == numero) existe = true;
@@ -104,7 +104,7 @@ public class Gestor{
      * @param limite_retirada Limite de retirada o pagos mediante la tarjeta
      * @param limite_pagoOnline Limite de pagos por internet
      */
-    public void CrearTarjeta(int numero, double limite_retirada, double limite_pagoOnline){
+    public static void CrearTarjeta(int numero, double limite_retirada, double limite_pagoOnline){
         boolean existe=false;
         for (int i = 0; i < Tarjeta.tarjetas.size(); i++) {
             if (Tarjeta.tarjetas.get(i).getNum_tarjeta() == numero) existe = true;
@@ -130,8 +130,8 @@ public class Gestor{
      * @param telefono Telefono personal del usuario
      * @param edad Edad del usuario
      */
-    public void ModificarPerfil(int numero, String login, String password, String nombre, String apellidos, String direccion, String DNI, String telefono, int edad){
-        if(Cliente.clientes.size()<=numero){
+    public static void ModificarPerfil(int numero, String login, String password, String nombre, String apellidos, String direccion, String DNI, String telefono, int edad){
+        if(Cliente.clientes.size()>=numero){
             if(Cliente.clientes.get(numero).getLogin().equals(login)){
                 Cliente.clientes.get(numero).setPassword(password);
                 Cliente.clientes.get(numero).setNombre(nombre);
